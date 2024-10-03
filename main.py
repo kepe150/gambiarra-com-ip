@@ -5,13 +5,13 @@ import time
 import os
 from dotenv import load_dotenv
 
-# Carrega as variáveis do arquivo .env
+# Isso aqui apenas serve para dizer para a hospedagem se o programa iniciou.
+print("PROGRAMA INICIADO")
+
 load_dotenv()
 
 external_ip = 0
 webhook_link = os.getenv('WEBHOOK_LINK')
-
-print(webhook_link)
 
 def get_external_ip():
   with urllib.request.urlopen('https://api.ipify.org?format=json') as response:
